@@ -92,9 +92,7 @@ public class movieJSONtoDB {
 																											// element
 			JsonObject rootobj = root.getAsJsonObject(); // May be an array, may
 															// be an object.
-			JsonArray jarray = rootobj.getAsJsonArray("results"); // just grab
-																	// the
-																	// zipcode
+			JsonArray jarray = rootobj.getAsJsonArray("results"); 
 			//System.out.println(jarray);
 			Connection con = ConnectToDB();
 			 PreparedStatement pstmt = con.prepareStatement("INSERT INTO moviedatabase values (?,?,?,?,?,?,?,?,?,?)");
